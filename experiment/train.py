@@ -7,7 +7,7 @@ def run():
     data = get_data('insurance')
     mlflow.set_tracking_uri("sqlite:///mlruns.db")
     s = setup(data, target='charges', session_id=123, silent=True,
-              log_experiment=True, experiment_name='insurance_demo4', log_plots=True)
+              log_experiment=True, experiment_name='experiment', log_plots=True)
     models = ['lr', 'dt', 'lightgbm', 'rf']
     all_models = [create_model(i) for i in models]
 

@@ -1,11 +1,11 @@
-name: docker-example
-
+name: pycaret-with-docker
+conda_env: conda.yaml
 docker_env:
-  image:  mlflow-docker-example
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: pycaret-with-docker
 
 entry_points:
   main:
-    parameters:
-      alpha: {type: float, default: 0.0}
-      l1_ratio: {type: float, default: 0.1}
-    command: "python train.py --alpha {alpha} --l1-ratio {l1_ratio}"
+    command: "python main.py"

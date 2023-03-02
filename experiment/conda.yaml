@@ -1,0 +1,15 @@
+name: pycaret-with-docker
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pandas
+  - scikit-learn
+  - numpy
+  - seaborn
+  - matplotlib
+  - pyyaml
+  - pip
+  - pip:
+    - mlflow
+    - pycaret
